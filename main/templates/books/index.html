@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+	<div class="text-center">
+        <p>
+        	Welcome to my books and quotes page.
+        </p>
+    </div>
+
+    <div class="col-4 offset-4">
+    {% for book in mybooks %}
+        <div class="card mt-3">
+            <div class="card-header">
+                <a href="book/{{ book.0 }}"><h4>{{ book.1 }}</h4></a>
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+
+{% endblock %}
